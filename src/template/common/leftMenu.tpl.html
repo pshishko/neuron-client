@@ -1,0 +1,54 @@
+<nav class="sidebar">
+	<ul class="nav">
+		<li>
+			<div data-toggle="collapse-next" class="item user-block has-submenu" style="cursor:default">
+				<div class="user-block-picture">
+					<!--<?php echo CHtml::image($expert->profile->library->getImageUrl('avatar', true), 'Avatar', array(-->
+					<!--'width' => '60',-->
+					<!--'height' => '60',-->
+					<!--'class' => 'img-thumbnail img-circle'-->
+					<!--)); ?>-->
+					<!-- Status when collapsed-->
+					<div class="user-block-status">
+						<div class="point point-success point-lg"></div>
+					</div>
+				</div>
+				<!-- Name and Role-->
+				<div class="user-block-info">
+					<span class="user-block-name item-text">
+						<!--{{crypt}}-->
+						Welcome, <br/>{{crypt.member.fullName}}</span>
+					<span class="user-block-role">{{crypt.member.title}}</span>
+					<!-- START Dropdown to change status-->
+					<div class="btn-group user-block-status">
+						<!--<?php $this->renderPartial('//common/_userBlockStatus', array('onlineStatus' => $expert->online)); ?>-->
+					</div>
+					<!-- END Dropdown to change status-->
+				</div>
+			</div>
+		</li>
+		<!-- END user info-->
+		<li id="userBlockContainer">
+			<div class="user-block">
+				<!--<?php $currentTab = MemberContact::model()->getChatUserTab(); ?>-->
+				<!--<?php echo CHtml::link('Recent', 'javascript:void(0);', array('class' => 'ajaxChatTab p btn ' . ($currentTab == 'recent' ? 'btn-primary' : 'btn-inverse'), 'data-tab' => 'recent')); ?>-->
+				<!--<?php echo CHtml::link('New', 'javascript:void(0);', array('class' => 'ajaxChatTab p btn ' . ($currentTab == 'new' ? 'btn-primary' : 'btn-inverse'), 'data-tab' => 'new')); ?>-->
+				<!--<?php echo CHtml::link('All', 'javascript:void(0);', array('class' => 'ajaxChatTab p btn ' . ($currentTab == 'all' ? 'btn-primary' : 'btn-inverse'), 'data-tab' => 'all')); ?>-->
+			</div>
+		</li>
+		<!-- Sidebar footer    -->
+		<li class="nav-footer">
+			<div class="nav-footer-divider"></div>
+			<div class="btn-group text-center">
+				<button type="button" data-toggle="tooltip" data-title="Add Contact" class="btn btn-link">
+					<em class="fa fa-user text-muted"><sup class="fa fa-plus"></sup>
+					</em>
+				</button>
+				<button type="button" data-toggle="tooltip" data-title="Settings" class="btn btn-link">
+					<em class="fa fa-cog text-muted"></em>
+				</button>
+				<a class="btn btn-link" ng-click="memberLogout()" data-toggle="tooltip" data-title="Logout" href="javascript:void(0);"><em class="fa fa-sign-out text-muted"></em></a>
+			</div>
+		</li>
+	</ul>
+</nav>

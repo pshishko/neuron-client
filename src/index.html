@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bot Demo</title> 
+	<meta charset="utf-8"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+
+	<!-- build:css(.tmp) css/style.min.css -->
+	  	<!-- Custom Fonts -->
+	  	<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+	  	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+	  	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat:400,700">
+
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="js/vendor/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<!-- endbuild -->
+
+</head>
+<body ng-controller="BaseController">
+
+	<div class="layout-wrapper view-animation" ui-view></div>
+
+	<!-- build:js js/script.min.js -->
+	<script type="text/javascript" src="js/vendor/requirejs/require.js"></script>
+	<script type="text/javascript" src="js/client/main.js"></script>
+	<!-- endbuild -->
+
+</body>
+</html>

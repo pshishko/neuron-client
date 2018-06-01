@@ -1,0 +1,33 @@
+<div ng-swipe-right="redirect('/home')">
+	<div ng-form name="UserForm">
+		<div class="header"><span>Bey</span>ond Cont<span>Rol</span></div>
+		<div class="header small"><span>Register</span></div>
+		<div ng-if="!isLoading">
+			<input type="text" ng-model="user.name" name="name" placeholder="Username" required/>
+			<p ng-show="UserForm.name.$invalid && !UserForm.name.$pristine" class="form-error">Email is
+				required.
+			</p>
+			<input type="text" ng-model="user.email" name="email" placeholder="Email" required/>
+			<p ng-show="UserForm.email.$invalid && !UserForm.email.$pristine" class="form-error">Email is
+				required.
+			</p>
+			<input type="password" ng-model="user.new_password" name="new_password" placeholder="Password" required/>
+			<p ng-show="UserForm.new_password.$invalid && !UserForm.new_password.$pristine" class="form-error">Password is
+				required.
+			</p>
+			<input type="password" ng-model="user.new_password_repeat" name="new_password_repeat" placeholder="Password" required/>
+			<p ng-show="UserForm.new_password_repeat.$invalid && !UserForm.new_password_repeat.$pristine" class="form-error">
+				Password is
+				required.
+			</p>
+		</div>
+	</div>
+	<div class="footer">
+		<div ng-if="isLoading">
+			<div class="circle" ng-class="{stop: !isLoading}"></div>
+			<div class="circle1" ng-class="{stop: !isLoading}"></div>
+		</div>
+		<span ng-if="!isLoading" ng-click="register(user);" class="button full">Next</span>
+	</div>
+
+</div>

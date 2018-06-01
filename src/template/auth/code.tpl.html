@@ -1,0 +1,23 @@
+<div ng-form name="CryptForm">
+	<div class="header"><span>Bey</span>ond Cont<span>Rol</span></div>
+	<div class="logo-container">
+		<img ng-src="img/logo/beyrol.png" alt="Logo" />
+	</div>
+	<div ng-if="!isCode && !isLoading">
+		<input type="password" ng-model="crypt.code" name="code" placeholder="New Crypt Code" required/>
+		<p ng-show="CryptForm.code.$invalid && !CryptForm.code.$pristine" class="form-error">Code is required.</p>
+	</div>
+	<div class="footer">
+		<div ng-if="isLoading">
+			<div class="circle" ng-class="{stop: !isLoading}"></div>
+			<div class="circle1" ng-class="{stop: !isLoading}"></div>
+		</div>
+		<div ng-if="isCode">
+			<span ui-sref="login" class="button full">Login</span>
+			<span ui-sref="register" class="button full">Register</span>
+		</div>
+		<div ng-if="!isCode && !isLoading">
+			<span ng-click="genCrypt();" class="button full">Next</span>
+		</div>
+	</div>
+</div>

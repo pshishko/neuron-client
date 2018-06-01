@@ -1,0 +1,26 @@
+{
+  "name": "mxp-bot",
+  "description": "Mxp Bot Client",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "*",
+    "load-grunt-tasks": "*",
+    "time-grunt": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-concurrent": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-requirejs": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-htmlmin": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-rev": "*",
+    "grunt-svgmin": "*",
+    "grunt-usemin": "*",
+    "jshint-stylish": "*"
+  }
+}

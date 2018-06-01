@@ -1,0 +1,16 @@
+<div ng-controller="NeuronController">
+    <div class="container-fluid">
+        <div class="row my-2">
+            <div class="col">
+                <button ng-click="get()" type="button" class="btn btn-info">Get Stored Network</button>
+                <button ng-click="training()" type="button" class="btn btn-info">Training</button>
+                <button ng-click="trainingStop()" type="button" class="btn btn-info">Training Stop</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="graph-container" bind-graph="graphNodes"></div>
+            </div>
+        </div>
+    </div>
+</div>

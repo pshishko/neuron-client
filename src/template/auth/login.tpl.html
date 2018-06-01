@@ -1,0 +1,59 @@
+<p class="text-center mb-lg">
+	<strong>SIGN IN TO CONTINUE.</strong>
+</p>
+
+<div class="panel-body">
+	<div class="mb-lg" ng-form name="UserForm">
+		<div class="text-right mb-sm">
+			<a ui-sref="auth.register" class="text-muted">Need to Signup?</a>
+		</div>
+
+		<div ng-if="!isLoading">
+			<div class="form-group has-feedback">
+				<input class="form-control" type="text" ng-model="user.username" name="username" placeholder="Enter email or username" required/>
+				<p ng-show="UserForm.username.$invalid && !UserForm.username.$pristine" class="text-danger">Email or Username is
+					required.</p>
+				<span class="fa fa-envelope form-control-feedback text-muted"></span>
+			</div>
+			<div class="form-group has-feedback">
+				<input class="form-control" type="password" ng-model="user.password" name="password" placeholder="Password" required/>
+				<p ng-show="UserForm.password.$invalid && !UserForm.password.$pristine" class="text-danger">Password is
+					required.</p>
+				<span class="fa fa-lock form-control-feedback text-muted"></span>
+			</div>
+			<button type="submit" class="btn btn-block btn-primary" ng-if="!isLoading" ng-click="login(user);">Login</button>
+		</div>
+
+		<div ng-if="isLoading">
+			<div class="circle" ng-class="{stop: !isLoading}"></div>
+		</div>
+
+		<div class="clearfix">
+			<div class="pull-right">
+				<a ui-sref="forgot" class="text-muted">Forgot your password?</a>
+			</div>
+		</div>
+	</div>
+	<!--
+		<div class="clearfix">
+			<?php if (Yii::app()->user->allowAutoLogin) {
+			$attribute = 'rememberMe';
+			?>
+			<div class="checkbox c-checkbox pull-left mt0">
+				<label class="checkbox" for="<?php echo CHtml::getIdByName(CHtml::resolveName($model, $attribute)); ?>">
+					<?php echo $form->checkBox($model, 'rememberMe'); ?>
+					<?php echo '<span class="fa fa-check"></span>' . $model->getAttributeLabel('rememberMe'); ?>
+					<?php echo $form->error($model, 'rememberMe'); ?>
+				</label>
+			</div>
+			<?php } ?>
+			<div class="pull-right">
+				<?php echo CHtml::link('Forgot your password?', array('site/forgotpassword'), array('class' => 'text-muted')) ?>
+			</div>
+		</div>
+		<div class="span4 offset1">
+			<p>You can also login via:</p>
+		</div>
+	-->
+</div>
+

@@ -1,0 +1,50 @@
+body {
+    /*background-color: #666666;*/
+    /*color: #666666;*/
+}
+h3 {
+    color: #222222;
+}
+
+.panel-info, .panel-primary {
+    border: none;
+}
+.panel-info > .panel-heading {
+    background-color: #999999;
+    border-color: #666666;
+    color: #333333;
+}
+.panel-primary > .panel-heading {
+    background-color: #336699;
+    border-color: #666666;
+}
+
+.btn-info {
+    background-color: #336699;
+    border-color: #336699;
+}
+.btn-info:hover {
+    background-color: #6699BB;
+    border-color: #336699;
+}
+
+img.photo {
+    width: 75px;
+}
+
+/**************************************************************************************************/
+
+.graph-container {
+    /*height: 100%;*/
+  height: 90vh;
+  /*border: solid 1px black;*/
+  background-color: #888;
+}
+.graph-container g {
+  cursor: pointer;
+}
+.graph-container svg {
+  width: 100%;
+  height: 100%;
+  color: white;
+}

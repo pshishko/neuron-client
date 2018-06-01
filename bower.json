@@ -1,0 +1,34 @@
+{
+  "name": "mxp-bot",
+  "version": "0.1",
+  "authors": [
+    "tur <pshishko@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/js/vendor"
+  ],
+  "dependencies": {
+    "requirejs": "^2.3.5"
+  },
+  "devDependencies": {
+    "vivagraphjs": "^0.10.1",
+    "lodash": "^4.17.10",
+    "angular": "^1.7.0",
+    "bootstrap": "^4.1.1",
+    "jshash": "~2.9.1",
+    "socket.io-client": "~1.7.0",
+    "angular": "~1.4.3",
+    "angular-ui-router": "~0.2.15",
+    "angular-ui-router.stateHelper": "~1.3.1",
+    "angular-resource": "~1.4.3",
+    "angular-animate": "~1.4.3",
+    "angular-event-emitter": "^0.0.2"
+  }
+}
